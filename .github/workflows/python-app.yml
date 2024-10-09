@@ -13,7 +13,7 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run:
           python -m pip install --upgrade pip
-          python install -r requirements.txt
+          python -m pip install -r requirements.txt
 
       # Step-4 Run test
       - name: Run test
